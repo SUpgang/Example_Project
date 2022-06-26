@@ -7,7 +7,7 @@ A dummy project to test formatting, linting, project structure and imports withi
  - Anaconda Navigator
  - VSCode
 
-## Install packages for formatting and linting
+## Install packages for formatting and linting and type checking
 Install linter Pylint then use Strg + Shift + P => Select Linter
 ```
 pip install pylint
@@ -16,6 +16,11 @@ Install formatter black then go to settings => search Formatting => change Provi
 ```
 pip install black 
 ```
+Install type checker mypy
+```
+pip install mypy 
+```
+
 ## Pylint
 (Not used) Create rcfile for pylint
 ```Generate 
