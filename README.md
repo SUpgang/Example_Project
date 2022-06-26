@@ -27,5 +27,12 @@ pip install mypy
 pylint --generate-rcfile > .pylintrc to create pylint file
 ```
 
+## Pytest
+Install pytest
+```
+pip install pytest 
+```
+create a tests directory with the same folder structure as the project. Create a test_*.py file to write tests for a module.
+
 ## Some References
 https://code.visualstudio.com/docs/python/settings-reference
