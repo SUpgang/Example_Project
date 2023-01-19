@@ -4,6 +4,7 @@ from mypackage.uipackage.uimodule import say_hello
 
 # unused import & ordering check
 import sys
+import time
 
 if __name__ == "__main__":
 
@@ -11,6 +12,6 @@ if __name__ == "__main__":
 
     print(say_hello())
     call_hello()
-
+    time.sleep(30)
     # Linting error for f-string without variable
     print(f"Script ended.")

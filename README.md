@@ -1,6 +1,6 @@
 # Example_Project
 
-A dummy project to test formatting, linting, project structure and imports within a minimal example.
+A dummy project to test formatting, linting, type checking, the project structure and imports as well as export as executable within a minimal example.
 
 ## What I use
  - Windows 11 PC
@@ -40,7 +40,7 @@ A dummy project to test formatting, linting, project structure and imports withi
 ## Imports
 Within the package for all ```*.py``` which will not be executed, use relative imports where ```.module``` searches in the current folder for ```module``` and ```..module``` moves one directory up and searches for ```module```. On the top level of the package you can insert a ```main.py``` with absolute imports. The package is found if installed properly through pip.
 
-## Install package
+## Install as a package
 Install the package in develop mode by using
 ```
 pip install -e .
@@ -70,6 +70,18 @@ pip install -e .
      "python.testing.unittestEnabled": false,
      "python.testing.pytestEnabled": true
     }
+```
+  5. If the package is installed in developer mode the test will find the imports and run well.
+
+## Export as executable
+ 1. Install pyinstaller
+```
+  pip install pyinstaller
+```
+ 2. Export the project by calling
+```
+  pyinstaller --path=.\ -F .\src\mypackage\main.py
+  pyinstaller --path=.\ -F .\script\script.py
 ```
 
 # References
