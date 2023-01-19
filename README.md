@@ -2,6 +2,8 @@
 
 A dummy project to test formatting, linting, type checking, the project structure and imports as well as export as executable within a minimal example.
 
+Be aware that another branch shows a minimal example including a simple GUI with PyQT6.
+
 ## What I use
  - Windows 11 PC
  - Miniconda
