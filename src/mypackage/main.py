@@ -1,17 +1,13 @@
-# import own packages within project
-from mypackage.core.coremodule import call_hello
-from mypackage.uipackage.uimodule import say_hello
+""" Proof of concept for GUI App without python installation """
 
-# unused import & ordering check
-import sys
-import time
+from mypackage.logger.mylogger import get_my_logger
+from mypackage.ui.main_window import test_window
+
+logger = get_my_logger(__name__, console_level="debug", file_level="warning")
 
 if __name__ == "__main__":
+    logger.debug("Debugtest")
+    logger.info("Infotest")
+    logger.warning("Warningtest")
 
-    print("Main started")
-
-    print(say_hello())
-    call_hello()
-    time.sleep(30)
-    # Linting error for f-string without variable
-    print(f"Main ended")
+    test_window()

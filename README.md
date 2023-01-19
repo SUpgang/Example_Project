@@ -84,5 +84,22 @@ pip install -e .
   pyinstaller --path=.\ -F .\script\script.py
 ```
 
+# GUI
+## PyQT6 Setup
+  1. Install PyQT6
+```
+  pip install PyQT6
+```
+ 2. Install pyqt designer through [QT Designer Homepage](https://build-system.fman.io/qt-designer-download)
+ 3. Open PyQT Designer and save as *.ui file
+ 4. run in cmd: 
+```
+  pyuic6 -o src/mypackage/ui/main_window_ui.py src/mypackage/ui/main_window.ui
+```
+ 5. To get rid of import errors with pylint related to PyQT6 add the following line into the pylintrc file:
+```
+  extension-pkg-whitelist=PyQt6
+```
+
 # References
   - https://code.visualstudio.com/docs/python/settings-reference
