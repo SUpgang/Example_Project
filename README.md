@@ -1,61 +1,27 @@
 # Example_Project
 
-A dummy project to test formatting, linting, type checking, the project structure and imports as well as export as executable within a minimal example.
+A sample project providing a basic structure, logging functionality and demonstrating fixes for some annoying pitfalls.
 
-Be aware that another branch shows a minimal example including a simple GUI with PyQT6.
+For linting, type checking and formatting the project uses
+ - black
+ - pylint
+ - mypy
 
-## What I use
- - Windows 11 PC
- - Miniconda
- - VSCode
-
-# Setup
-## Environment
-  1. Create a new virtual environment through conda
-```
-    conda create -n myenv python=3.11
-```
-  2. Activate the environment to install packages through pip
-```
-    conda activate myenv
-```
-  3. Select interpreter in vscode CTRL + Shift + P: Select Interpreter
-
-## Linting, formatting and type checking
-  1. Install linting, formatting and type checking through requirements.txt
-```
-  pip install -r requirements.txt
-```
-  2. or manually 
-```
-  pip install pylint black mypy
-```
-  3. Select linter through CTRL + Shift + P: Select Linter
-  4. or manuall through ```settings.json```
-```
-    {
-     "python.linting.enabled": true,
-     "python.linting.pylintEnabled": true,
-     "python.linting.mypyEnabled": true,
-    }
-```
 ## Imports
-Within the package for all ```*.py``` which will not be executed, use relative imports where ```.module``` searches in the current folder for ```module``` and ```..module``` moves one directory up and searches for ```module```. On the top level of the package you can insert a ```main.py``` with absolute imports. The package is found if installed properly through pip.
-
-## Install as a package
-Install the package in develop mode by using
+Relative imports can be used if the ```moduleA.py``` file is executed with the command
+```
+python -m mypackage.moduleA
+```
+The script can be used if the package was installed in develop mode by using
 ```
 pip install -e .
 ```
+A requirement for this is to setup the toml file correctly.
 
-## (Not needed) Fix pylint import errors
+## Further linting settings
   1. Create pylintrc through 
 ```
     pylint --generate-rcfile >.pylintrc
-```
-  2. Add 
-```
-    init-hook='import sys; sys.path.append(".")'
 ```
 
 ## Pytest
