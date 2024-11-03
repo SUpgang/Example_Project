@@ -1,8 +1,8 @@
 """ Submodule example """
 
-from ..logger.mylogger import get_my_logger
+from mylogger import get_logger
 
-logger = get_my_logger(__name__)
+logger = get_logger(__name__, "./logging.cfg")
 
 
 def say_hello():

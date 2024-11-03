@@ -1,17 +1,17 @@
 """Main module within the package"""
 
 import time
+from mylogger import get_logger
 
 from .subpackage.submodule1 import say_hello
-from .logger.mylogger import get_my_logger
 
-logger = get_my_logger(__name__)
+logger = get_logger(__name__, "./logging.cfg")
 
 
 def say_bye():
     """Printing and returning hello"""
     text = "Bye from module"
-    logger.info(text)  # replace with logger
+    logger.info(text)
     return text
 
 
